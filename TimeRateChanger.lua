@@ -31,6 +31,8 @@ TimeRateChanger.process = function(self, filePath, timeRate)
 		elseif blockName == "Metadata" then
 			if line:startsWith("Version") then
 				fileLines[i] = fileLines[i] .. " [" .. timeRate .. "x]"
+			elseif line:startsWith("BeatmapID") then
+				fileLines[i] = "BeatmapID:0"
 			end
 		elseif blockName == "Editor" then
 			if line:startsWith("Bookmarks") then
