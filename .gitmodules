@@ -1,0 +1,3 @@
+[submodule "omppc"]
+	path = omppc
+	url = https://github.com/semyon422/omppc
