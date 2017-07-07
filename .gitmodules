@@ -1,3 +1,6 @@
 [submodule "omppc"]
 	path = omppc
 	url = https://github.com/semyon422/omppc
+[submodule "tweaks"]
+	path = tweaks
+	url = https://github.com/semyon422/tweaks.lua
