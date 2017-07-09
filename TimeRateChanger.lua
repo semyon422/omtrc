@@ -66,10 +66,10 @@ TimeRateChanger.process = function(self, filePath, timeRate)
 			local hitObjectTable = line:split(",")
 			hitObjectTable[3] = math.floor(hitObjectTable[3] / timeRate)
 			hitObjectTable[6] = hitObjectTable[6]:split(":")
-			if #hitObjectTable[6] == 5 then
+			if #hitObjectTable[6] == 6 then
 				hitObjectTable[6][1] = math.floor(hitObjectTable[6][1] / timeRate)
 			end
-			hitObjectTable[6] = table.concat(hitObjectTable[6], ":") .. ":"
+			hitObjectTable[6] = table.concat(hitObjectTable[6], ":")
 			fileLines[i] = table.concat(hitObjectTable, ",")
 		end
 	end
