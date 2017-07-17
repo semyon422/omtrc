@@ -3,7 +3,7 @@ currentDir = io.popen("cd"):read('*l')
 bomtrc = io.open("shell.bat", "w")
 bomtrc:write("@echo off\n")
 bomtrc:write("cd " .. currentDir .. "\n")
-bomtrc:write("lua omtrc.lua -b %1 -i\n")
+bomtrc:write("lua omtrc.lua -i -s -a -b %1\n")
 bomtrc:close()
 
 menureg = io.open("install.reg", "w")
