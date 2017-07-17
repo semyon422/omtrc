@@ -1,6 +1,10 @@
 TimeRateChanger = createClass()
 
 TimeRateChanger.process = function(self, filePath, timeRate)
+	local filePathTable = filePath:split("\\")
+	self.mapFileName = filePathTable[#filePathTable]
+	self.mapFolderPath = string.sub(filePath, 1, #filePath - #self.mapFileName - 1)
+	
 	local fileLines = {}
 	
 	local file = io.open(filePath, "r")
@@ -26,7 +30,11 @@ TimeRateChanger.process = function(self, filePath, timeRate)
 				local audio = line:sub(#"AudioFilename: "):trim()
 				local audioTable = audio:split(".")
 				audioTable[#audioTable - 1] = audioTable[#audioTable - 1] .. timeRate
-				fileLines[i] = "AudioFilename: " .. table.concat(audioTable, ".")
+				local ratedAudio = table.concat(audioTable, ".")
+				fileLines[i] = "AudioFilename: " .. ratedAudio
+				
+				self.audio = audio
+				self.ratedAudio = ratedAudio
 			end
 		elseif blockName == "Metadata" then
 			if line:startsWith("Version") then
