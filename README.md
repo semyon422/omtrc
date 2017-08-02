@@ -15,9 +15,9 @@ This script creates a new map at the same mapset.
 ```
 
 Script installation:  
-0) install lua for windows
-1) locate omtrc folder somewhere  
-2) locate sox (with lame and mad libraries) folder in omtrc folder  
-3) run configure.lua (it creates shell.bat and install.reg)
-4) run install.reg
-5) complete! Now right click on osu!mania beatmap and select omtrc, then enter time rate and wait, after finishing work press enter to close window and go to the game
+1) install lua for windows
+2) locate omtrc folder somewhere  
+3) locate sox (with lame and mad libraries) folder in omtrc folder  
+4) run configure.lua (it creates shell.bat and install.reg)
+5) run install.reg
+6) complete! Now right click on osu!mania beatmap and select omtrc, then enter time rate and wait, after finishing work press enter to close window and go to the game
